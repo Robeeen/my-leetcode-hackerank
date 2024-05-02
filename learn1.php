@@ -201,7 +201,25 @@ function staircase($n) {
 
 }
 
-`staircase($n);
+$n = 6;
+staircase($n);
+
+echo PHP_EOL;
+
+//Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
+// Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 
 
 
+
+function miniMaxSum($arr) {
+    // Write your code here
+     sort($arr);
+    return $arr;
+    //print_r($arr);
+    echo $min = array_sum(array_slice($arr, 0, 4)) . ' ' . $max = array_sum(array_slice($arr, -4, 4));
+      
+
+}
+$arr = [5,2,3,4,1];
+miniMaxSum($arr);
