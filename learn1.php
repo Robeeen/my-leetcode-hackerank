@@ -214,7 +214,7 @@ echo PHP_EOL;
 
 function miniMaxSum($arr) {
     // Write your code here
-     sort($arr);
+    sort($arr);
     
     //print_r($arr);
     echo $min = array_sum(array_slice($arr, 0, 4)) . ' ' . $max = array_sum(array_slice($arr, -4, 4));
@@ -223,3 +223,27 @@ function miniMaxSum($arr) {
 }
 $arr = [5,2,3,4,1];
 miniMaxSum($arr);
+
+echo PHP_EOL;
+
+//You are in charge of the cake for a child's birthday. 
+//You have decided the cake will have one candle for each year of their total age. 
+//They will only be able to blow out the tallest of the candles. Count how many candles are tallest.
+
+function birthdayCakeCandles($candles) {
+
+    $count = array();
+    foreach($candles as $candle){
+        @$count[$candle]++;
+    }
+    print_r($count);
+    echo max($count);
+
+    //accepted solution
+    $max = max($candles);
+    $count = array_count_values($candles);
+    return $count[$max];
+}
+
+$candles = [4,4,2,2,1,8,8,8];
+birthdayCakeCandles($candles);
