@@ -215,7 +215,7 @@ echo PHP_EOL;
 function miniMaxSum($arr) {
     // Write your code here
      sort($arr);
-    return $arr;
+    
     //print_r($arr);
     echo $min = array_sum(array_slice($arr, 0, 4)) . ' ' . $max = array_sum(array_slice($arr, -4, 4));
       
