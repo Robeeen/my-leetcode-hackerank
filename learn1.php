@@ -247,3 +247,19 @@ function birthdayCakeCandles($candles) {
 
 $candles = [4,4,2,2,1,8,8,8];
 birthdayCakeCandles($candles);
+
+echo PHP_EOL;
+//Given a time in -hour AM/PM format, convert it to military (24-hour) time.
+
+//Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
+//- 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+
+function timeConversion($s) {
+    // Write your code here
+    return date("H:i:s", strtotime($s));
+}
+
+$s = 07:05:45PM;
+timeConversion($s);
+
+echo PHP_EOL;
