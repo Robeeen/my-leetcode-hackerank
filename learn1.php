@@ -273,3 +273,28 @@ function removeDuplicates(&$nums){
 $nums = [1,1,2];
 removeDuplicates($nums);
 
+echo PHP_EOL;
+
+//Remove elemenrs
+//Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. 
+//The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+//Input: nums = [3,2,2,3], val = 3
+//Output: 2, nums = [2,2,_,_]
+
+function removeElement(&$nums, $val){
+    $result = 0;
+    for($x = 0; $x <count($nums); $x++){
+        if($nums[$x] != $val){
+            $nums[$result] = $nums[$x];
+            $result++;
+        }
+    }
+    echo $result;
+}
+
+$nums =[3,2,2,3];
+$val = 3;
+
+removeElement($nums, $val);
+
+
