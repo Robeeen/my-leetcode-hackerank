@@ -259,7 +259,17 @@ function timeConversion($s) {
     return date("H:i:s", strtotime($s));
 }
 
-$s = 07:05:45PM;
+$s = "07:05:45PM";
 timeConversion($s);
 
 echo PHP_EOL;
+//26. Remove Duplicates from Sorted Array
+
+function removeDuplicates(&$nums){
+    $nums = array_unique($nums);
+    echo count($nums);
+} 
+
+$nums = [1,1,2];
+removeDuplicates($nums);
+
