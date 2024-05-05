@@ -328,6 +328,10 @@ array_chunks($arr, $size);
 //     return results;
 // };
 
+echo PHP_EOL;
+
+//Note: Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [−2^31, 2^31 − 1]. 
+//For this problem, if the quotient is strictly greater than 2 ^ 31 - 1, then return 2 ^ 31 - 1, and if the quotient is strictly less than -2^31, then return -231.
 
 function divide($dividend, $divisor) {
     $result = intdiv($dividend, $divisor);
@@ -340,4 +344,29 @@ function divide($dividend, $divisor) {
 $dividend = 7;
 $divisor = -3;
 divide($dividend, $divisor, 0);
+echo PHP_EOL;
+
+//  84 round to  (85 - 84 is less than 3)
+// 29 do not round (result is less than 40)
+// 57 do not round (60 - 57 is 3 or higher)
+
+// if $grades is an integer.
+
+function gradingStudents($grades) {
+
+     $diff = ceil($grades / 5) * 5 - $grades;
+        if($grades < 40){
+           echo $result = $grades;
+        }else{
+            if($diff < 3){
+                echo $result = ceil($grades / 5) * 5;
+            }else{
+               echo $result = $grades;
+            }
+        }
+}
+
+$grades = 57;
+gradingStudents($grades);
+
 
