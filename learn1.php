@@ -316,3 +316,28 @@ function array_chunks($arr, $size){
 $arr = [1,2,3,4,5];
 $size = 3;
 array_chunks($arr, $size);
+
+//same solution in Js
+// var chunk = function(arr, size) {
+//     if (arr.length === 0)
+//         return [];
+//     let results = [];
+//     while(arr.length){
+//         results.push(arr.splice(0, size))
+//     }
+//     return results;
+// };
+
+
+function divide($dividend, $divisor) {
+    $result = intdiv($dividend, $divisor);
+    if($result > pow(2, 31) -1){
+        $result = $result -1;
+    }
+    echo intval($result);
+}
+
+$dividend = 7;
+$divisor = -3;
+divide($dividend, $divisor, 0);
+
