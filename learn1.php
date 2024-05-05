@@ -297,4 +297,22 @@ $val = 3;
 
 removeElement($nums, $val);
 
+echo PHP_EOL;
 
+//Input: arr = [1,2,3,4,5], size = 1
+//Output: [[1],[2],[3],[4],[5]]
+//Explanation: The arr has been split into subarrays each with 1 element.
+
+function array_chunks($arr, $size){
+    if(count($arr) == 0){
+        return [];
+    }
+    for($i = 0; $i <count($arr); $i++){
+        $result = array_chunk($arr, $size);
+    }
+    print_r($result);
+}
+
+$arr = [1,2,3,4,5];
+$size = 3;
+array_chunks($arr, $size);
