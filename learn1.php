@@ -387,7 +387,7 @@ function gradingStudentsArray($grades){
     return $grades;
     
 }
-$grades = [73, 67, 38, 33, 84, 29, 57];
+$grades = [73, 67, 38, 33, 84, 57];
 
 gradingStudentsArray($grades);
 
