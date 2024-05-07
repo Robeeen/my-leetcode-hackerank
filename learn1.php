@@ -365,26 +365,30 @@ function gradingStudents($grades) {
         }
 }
 //$grades = 57;
-gradingStudents($grades);
+//gradingStudents($grades);
 echo PHP_EOL;
 //with Array instead of integar $grades.
 
 function gradingStudentsArray($grades){
+    
     for($i = 0; $i < count($grades); $i++){
-        $diff = ceil($grades[$i] / 5) * 5 - $grades[$i];
-        if($grades[$i] < 40){
-            echo $result = $grades[$i];
-         }else{
-             if($diff < 3){
-                 echo $result = ceil($grades[$i] / 5) * 5;
-             }else{
-                echo $result = $grades[$i];
-             }
-         }
+        if($grades[$i] >= 38){
+            $m = $grades[$i] % 5;
+            if($m == 3){
+                echo $grades[$i] += 2;
+            }elseif($m == 4){
+               echo  $grades[$i] += 1;
+            }else{
+                echo $grades[$i];
+            }
+        }
 
     }
+    return $grades;
+    
 }
 $grades = [73, 67, 38, 33, 84, 29, 57];
+
 gradingStudentsArray($grades);
 
 
