@@ -43,3 +43,21 @@ newShape.calcPerimeter();
 
 const anotherShapce = new Shape('Triangle', 3, 3);
 anotherShapce.calcPerimeter();
+
+class Square extends Shape
+{
+    constructor(sideLength){
+        super('square'); //Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+        this.sides = 4;
+        this.sideLength = sideLength;
+    }
+    calcArea(){
+     console.log(`${this.name} area: ${this.sideLength ** 2}`);
+    }
+ }
+
+ const square = new Square(5);
+ square.calcArea();
+ square.calcPerimeter();
+
+
