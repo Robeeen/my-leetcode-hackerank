@@ -23,6 +23,9 @@ const myObject = {
 
 myObject.greet();
 
+
+//https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
+
 class Shape{
     name; sides; sideLength;
 
@@ -61,3 +64,49 @@ class Square extends Shape
  square.calcPerimeter();
 
 
+ //we declare the requestURL variable to store the GitHub URL
+ //we use the URL to initialize a new Request object.
+ //we make the network request using the fetch() function, and this returns a Response object
+ //we retrieve the response as JSON using the json() function of the Response object.
+
+// parse(): Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.
+// stringify(): Accepts an object as a parameter, and returns the equivalent JSON string.
+
+
+const section = document.querySelector('section');
+
+let para1 = document.createElement('p');
+let para2 = document.createElement('p');
+let motherInfo = 'The mother cats are called ';
+let kittenInfo;
+const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+fetch(requestURL)
+  .then(response => response.text())
+  .then(text => displayCatInfo(text))
+
+function displayCatInfo(catString) {
+  let total = 0;
+  let male = 0;
+let cats = JSON.parse(catString);
+for(let i = 0; i < cats.length; i++){
+    for(const kitten of cats[i].kittens){
+        total++;
+        //console.log(total);
+        if(kitten.gender === 'm'){
+        male++;
+        }
+    }
+}
+
+// Add your code here
+
+// Don't edit the code below here!
+
+  para1.textContent = motherInfo;
+  para2.textContent = kittenInfo;
+}
+
+section.appendChild(para1);
+section.appendChild(para2);
+    
