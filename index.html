@@ -17,12 +17,23 @@
 
 <br />
 <br /><br />
+<div style="display: flex;">
 
-<input type="text" id="pokemonName" placeholder="type a name">
-<button onclick="fetchData()">Fetch Pokemon</button>
+    <div>
+        <input type="text" id="pokemonName" placeholder="type a name">
+        <button onclick="fetchData()">Fetch Pokemon</button>
 
-<br />
-<img src="" alt="pokemon fry" id="pokemonFry" style="display: none;" />
+        <br />
+        <img src="" alt="pokemon fry" id="pokemonFry" style="display: none;" />
+    </div>
+    <div>
+        <div id="pokemonList" >
+            <p></p>
+        </div>
+    </div>
+
+</div>
+
     
 <script src="index.js" defer></script>
 </body>

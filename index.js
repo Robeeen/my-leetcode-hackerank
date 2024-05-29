@@ -117,29 +117,29 @@ section.appendChild(para1);
 section.appendChild(para2);
 
 
-Uplaoding a File with Js.  FormData() and fetch().
+//Uplaoding a File with Js.  FormData() and fetch().
 
-async function uploadFiles(){
-    try{
-    const response = await fetch("https://example.com", {
-        method : "PUT",
-        body : FormData,
-    });
-    const result = await response.json();
-    console.log("Success:", result);
-    }
-    catch(error){
-        console.error("Error:", error);
-    }
-}
+// async function uploadFiles(){
+//     try{
+//     const response = await fetch("https://example.com", {
+//         method : "PUT",
+//         body : FormData,
+//     });
+//     const result = await response.json();
+//     console.log("Success:", result);
+//     }
+//     catch(error){
+//         console.error("Error:", error);
+//     }
+// }
 
-const formData = new formData();
-const fileField = document.querySelector('input[type="file"]');
+// const formData = new formData();
+// const fileField = document.querySelector('input[type="file"]');
 
-formData.append('username', '12345');
-formData.append('avatar', fileField.file[0]);
+//formData.append('username', '12345');
+//formData.append('avatar', fileField.file[0]);
 
-Pokemon search images project with fetch
+//Pokemon search images project with fetch
 
 async function fetchData(){
     try{
@@ -150,13 +150,38 @@ async function fetchData(){
             throw new Error("There is a problem with the fetch url")
         }
         const result = await response.json(); //now we get the data for specific typed pokemon name
+        //console.log(result);
         const pokemonSprite = result.sprites.front_default; //now we get the url of the image to set on image src=""
         const frontEnd = document.getElementById('pokemonFry');
 
-        frontEnd.src = pokemonSprite; //now the image url it set which id is pokemonFry
+        frontEnd.src = pokemonSprite; //now set the image url it is pokemonFry
         frontEnd.style = 'block'; //unhide the image
 
     }catch(error){
+        console.error("Error:", error);
+    }
+}
+
+displayData();
+async function displayData(){
+    try{
+        const pokemonList = document.getElementById('pokemonList');
+        const newresponse = await fetch('https://pokeapi.co/api/v2/pokemon/');
+
+        if(!newresponse.ok){
+            throw new Error("Problem with the URL");
+        }
+        const data = await newresponse.json();
+       
+        const names = data.results;
+        
+        for(let name of names){
+            pokemonList.innerHTML += `${name.name} <br>`;
+        }
+
+        
+    }
+    catch(error){
         console.error("Error:", error);
     }
 }
