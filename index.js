@@ -117,29 +117,29 @@ section.appendChild(para1);
 section.appendChild(para2);
 
 
-//Uplaoding a File with Js.  FormData() and fetch().
+Uplaoding a File with Js.  FormData() and fetch().
 
-// async function uploadFiles(){
-//     try{
-//     const response = await fetch("https://example.com", {
-//         method : "PUT",
-//         body : FormData,
-//     });
-//     const result = await response.json();
-//     console.log("Success:", result);
-//     }
-//     catch(error){
-//         console.error("Error:", error);
-//     }
-// }
+async function uploadFiles(){
+    try{
+    const response = await fetch("https://example.com", {
+        method : "PUT",
+        body : FormData,
+    });
+    const result = await response.json();
+    console.log("Success:", result);
+    }
+    catch(error){
+        console.error("Error:", error);
+    }
+}
 
-// const formData = new formData();
-// const fileField = document.querySelector('input[type="file"]');
+const formData = new formData();
+const fileField = document.querySelector('input[type="file"]');
 
-//formData.append('username', '12345');
-//formData.append('avatar', fileField.file[0]);
+formData.append('username', '12345');
+formData.append('avatar', fileField.file[0]);
 
-//Pokemon search images project with fetch
+Pokemon search images project with fetch
 
 async function fetchData(){
     try{
