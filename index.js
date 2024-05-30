@@ -171,18 +171,71 @@ async function displayData(){
         if(!newresponse.ok){
             throw new Error("Problem with the URL");
         }
-        const data = await newresponse.json();
-       
+        const data = await newresponse.json();       
         const names = data.results;
         
         for(let name of names){
-            pokemonList.innerHTML += `${name.name} <br>`;
-        }
-
-        
+            pokemonList.innerHTML += `Name: ${name.name}, URL:${name.url} <br>`;
+        }        
     }
     catch(error){
         console.error("Error:", error);
     }
 }
 
+//Async Function Await Promise : check
+
+function walkDog(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dogWalk = true;
+
+            if(dogWalk){
+                resolve("You have taken walk Dog task");
+            }else{
+                reject("You missed the walk dog!");
+            }
+        }, 1500);
+    });
+}
+
+function cleanDog(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const cleaned = true;
+            if(cleaned){
+                resolve("You have cleaned the Dog task");            
+            }else{
+                reject("You missed to clean the dog yet!");
+            }
+        }, 2500);
+    });
+}
+
+function feedDog(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const feed = true;
+            if(feed){
+                resolve("You have feeded the dog");
+            }else{
+                reject("You missed to feed the dog");
+            }
+        }, 3000);
+    });
+}
+
+async function doTasks(){
+    const firstTask = await walkDog();
+    console.log(firstTask);
+
+    const secondTask = await cleanDog();
+    console.log(secondTask);
+
+    const thirdTask = await feedDog();
+    console.log(thirdTask);
+
+    console.log("You have done all tasks!!")
+}
+
+doTasks();
