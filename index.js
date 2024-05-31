@@ -271,7 +271,9 @@ const height = 75;
 const color = '#c2c2c2';
 
 ctx.beginPath();
-ctx.fillStyle = "green";
+ctx.fillStyle = color;
 ctx.fillRect(x,y,width, height);
+
+
 
 
