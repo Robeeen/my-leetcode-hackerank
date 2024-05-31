@@ -257,3 +257,21 @@ array_name.innerHTML = ' ';
 array_name.style.background = '#c2c2c2';
 
 array_name.appendChild(paras);
+
+
+//Create a function to start drawing rectangle on canvas
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const x = 50;
+const y = 60;
+const width = 100;
+const height = 75;
+const color = '#c2c2c2';
+
+ctx.beginPath();
+ctx.fillStyle = "green";
+ctx.fillRect(x,y,width, height);
+
+
