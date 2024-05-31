@@ -245,7 +245,7 @@ doTasks();
 
 const names = ['prova', 'soma', 'kayak', 'nova', 'hanna'];
 const paras = document.createElement('p');
-
+//https://stackoverflow.com/questions/7350363/select-a-random-string-from-an-array
 function chooseName(){
     const chosenName = Math.floor(Math.random()*names.length);
     const display = names[chosenName];
@@ -254,5 +254,6 @@ function chooseName(){
 
 chooseName();
 array_name.innerHTML = ' ';
+array_name.style.background = '#c2c2c2';
 
 array_name.appendChild(paras);
