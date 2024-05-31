@@ -239,3 +239,20 @@ async function doTasks(){
 }
 
 doTasks();
+
+//DOM -  create a simple function — chooseName() — that prints a random name from the provided array (names)\
+// to the provided paragraph (paras), and then run it once.
+
+const names = ['prova', 'soma', 'kayak', 'nova', 'hanna'];
+const paras = document.createElement('p');
+
+function chooseName(){
+    const chosenName = Math.floor(Math.random()*names.length);
+    const display = names[chosenName];
+    paras.textContent = display;
+}
+
+chooseName();
+array_name.innerHTML = ' ';
+
+array_name.appendChild(paras);
