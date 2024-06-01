@@ -281,18 +281,16 @@ ctx.fillRect(x,y,width, height);
 
 
 const namesii = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
-const para = document.createElement('p');
+const parax = document.createElement('p');
 
 // Add your code here
 
-function random(min, max){
-   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+const random = (min, max) => Math.floor(Math.random() * (max - min +1) + min);
 
 function chooseNames(){
   const cname = random(0,2);
   const randoms = namesii[cname];
-  para.textContent = randoms;
+  parax.textContent = randoms;
 }
 
 chooseNames();
@@ -301,8 +299,23 @@ chooseNames();
 
 section.innerHTML = ' ';
 
-section.appendChild(para);
+section.appendChild(parax);
+
+//Function -4
+//Display names which are less than 5 character in names
 
 
+const namearray = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+const paragr = document.createElement('p');
+
+const isShort = (name) => name.length <5;
+
+const shortNames = namearray.filter(isShort);
+paragr.textContent = shortNames;
+
+
+section.innerHTML = ' ';
+
+section.appendChild(paragr);
 
 
