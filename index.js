@@ -275,7 +275,9 @@ ctx.fillStyle = color;//Color has to place in first to get color
 ctx.fillRect(x,y,width, height);
 
 //Function: 3
-
+//1 . Refactor the code that generates the random number into a separate function called random(), which takes as parameters two generic bounds that the random number should be between, and returns the result.
+//2. Update the chooseName() function so that it makes use of the random number function, takes the array to choose from as a parameter (making it more flexible), and returns the result.
+//3. Print the returned result into the paragraph (para)'s textContent.
 
 
 const namesii = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
