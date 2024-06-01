@@ -319,3 +319,17 @@ section.innerHTML = ' ';
 section.appendChild(paragr);
 
 
+//Click and change background with random color
+
+const btn = document.getElementById('btn');
+
+function randomz(number){
+    return Math.floor(Math.random() *  number + 1);
+}
+
+btn.addEventListener('click', ()=> {
+    const changColor = `rgb(${randomz(255)} ${randomz(255)} ${randomz(255)})`;
+    document.body.style.backgroundColor = changColor;
+})
+
+
