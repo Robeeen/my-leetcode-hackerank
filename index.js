@@ -271,8 +271,35 @@ const height = 75;
 const color = '#c2c2c2';
 
 ctx.beginPath();
-ctx.fillStyle = color;
+ctx.fillStyle = color;//Color has to place in first to get color
 ctx.fillRect(x,y,width, height);
+
+//Function: 3
+
+
+
+const namesii = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+const para = document.createElement('p');
+
+// Add your code here
+
+function random(min, max){
+   return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function chooseNames(){
+  const cname = random(0,2);
+  const randoms = namesii[cname];
+  para.textContent = randoms;
+}
+
+chooseNames();
+
+// Don't edit the code below here!
+
+section.innerHTML = ' ';
+
+section.appendChild(para);
 
 
 
