@@ -21,22 +21,32 @@ body{
 
 /*For the second container in test.html*/
 .grid-test-1{
-    background-color: #eee;
+    background-color: #b6eafd;
     max-width: 900px;
     display: grid;
     margin: 0 auto;
-    row-gap: 5px;
-    column-gap: 5px;
+    gap: 5px;
+    padding: 5px;
+    justify-items: stretch;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 200px 300px;
 }
 
 .grid-test-1 > div{
-    background-color: #777;
-    border: 1px solid;
+    background-color: #bfbdbd;
+    border: 1px solid rgb(51, 102, 255);
     padding: 30px;
     text-align: center;    
 }
 .grid-test-1 > div:nth-child(1) {
     grid-column: 1 / span 2;
 }
-
+.grid-test-1 > div:nth-child(2) {
+    grid-column: span 3;
+}
+.grid-test-1 > div:nth-child(5) {
+    grid-column: span 3;
+}
+.grid-test-1 > div:nth-child(6) {
+    grid-column: span 2;
+}
