@@ -4,6 +4,7 @@ body{
     margin: 30px;
     font-family: "Poppins";
 }
+/*For the first container on test.html*/
 .grid-container{
     background-color: #eee;
     max-width: 900px;
@@ -17,3 +18,25 @@ body{
     padding: 20px;
     border: 1px solid #777;
 }
+
+/*For the second container in test.html*/
+.grid-test-1{
+    background-color: #eee;
+    max-width: 900px;
+    display: grid;
+    margin: 0 auto;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-test-1 > div{
+    background-color: #777;
+    border: 1px solid;
+    padding: 30px;
+    text-align: center;    
+}
+.grid-test-1 > div:nth-child(1) {
+    grid-column: 1 / span 2;
+}
+
