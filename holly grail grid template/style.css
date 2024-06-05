@@ -16,13 +16,14 @@ ul, li{
 header{
     grid-column: span 3;
     border-bottom: 1px solid #c2c2c2;
-    margin: 0 20px;
+    margin: 0;
+    padding: 10px;
 }
 footer{
     grid-column: span 3;
-    margin: 20px;
+    margin: 0;
     text-align: center;
-    font-size: 10px;
+    font-size: 13px;
     padding: 30px;
     border-top: 1px solid #c2c2c2;
 }
@@ -41,14 +42,42 @@ nav li p{
 article{
     padding: 30px;
     border-right: 1px solid #c2c2c2;
-
 }
 article h2{
-    font-weight: 400;
+    font-weight: 600;
 }
 article img{
     width: 100%;
 }
 aside{
     padding: 30px;
+}
+
+
+/*Responsive*/
+@media screen and (max-width: 1200px) {
+    nav{
+        grid-column: span 3;
+        border-bottom: 1px solid #c2c2c2;
+    }
+    nav li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+    article{
+        grid-column: span 2;
+    }
+}
+@media screen and (max-width: 900px) {
+    nav, article, aside{
+        grid-column: span 3;
+    }
+    aside{
+        border-top:  1px solid #c2c2c2;
+    }
+    article{
+        border-right: 0px;
+    }
+
+
 }
