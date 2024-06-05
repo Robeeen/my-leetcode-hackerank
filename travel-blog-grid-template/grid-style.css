@@ -56,7 +56,6 @@ article p, h3 {
 @media screen and (max-width: 700px) {
     article, article.featured {
         display: block;
-        margin: 0 20px;
-        
+        margin: 0 20px;        
     }
 }
