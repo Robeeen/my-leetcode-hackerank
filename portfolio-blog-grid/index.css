@@ -64,3 +64,20 @@ main{
     min-width: 100%;
     min-height: 100%;
 }
+
+@media screen and (max-width: 1200px) {
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+    .panel.photo {
+        grid-template-columns: 1fr 1fr;
+        grid-column: span 2;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main{
+        grid-template-rows: 700px 600px 600px;
+    }
+}
