@@ -15,14 +15,15 @@ body{
 .grid-container > div{
     background-color: #ccc;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #777;
 }
 .grid-item.nested-grid{
     display: grid;
+    border: 1px solid #777;
     background-color: cadetblue;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 /*For the second container in test.html*/
