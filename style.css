@@ -15,8 +15,14 @@ body{
 .grid-container > div{
     background-color: #ccc;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     border: 1px solid #777;
+}
+.grid-item.nested-grid{
+    display: grid;
+    background-color: cadetblue;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
 
 /*For the second container in test.html*/
@@ -29,7 +35,7 @@ body{
     padding: 5px;
     justify-items: stretch;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 100px 200px 300px;
+    /* grid-template-rows: 100px 200px 300px; */
 }
 
 .grid-test-1 > div{
