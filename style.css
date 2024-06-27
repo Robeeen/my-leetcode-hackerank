@@ -31,7 +31,24 @@ body{
     background-color: #bfbdbd;
     border: 1px solid rgb(51, 102, 255);
     padding: 30px;
-    text-align: left;  
+    text-align: center;  
+}
+.grid-item1.nested-grid1{
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+    background-color: cadetblue;
+    grid-template-columns: 50px 234px;
+    grid-template-rows: 234px 50px;
+
+}
+.grid-item1.nested-grid1 > div{
+    background-color: #bfbdbd;
+    border: 1px solid rgb(51, 102, 255); 
+    text-align: center; 
+}
+.grid-item1.nested-grid1 > div:nth-child(1){
+    background-color: #548bf7;
 }
 
 /*For the second container in test.html*/
