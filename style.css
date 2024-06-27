@@ -37,22 +37,53 @@ body{
     display: grid;
     gap: 5px;
     padding: 5px;
-    background-color: cadetblue;
+    background-color: rgb(224, 224, 224);
     grid-template-columns: 50px 234px;
     grid-template-rows: 234px 50px;
-    
-
 }
 .grid-item1.nested-grid1 > div{
     background-color: #bfbdbd;
     border: 1px solid rgb(51, 102, 255); 
-    
+    align-content: space-evenly; /* Make middle vertically "Space Evenly" */
 }
 .grid-item1.nested-grid1 > div:nth-child(1){
-    background-color: #548bf7;
-    align-content: space-evenly;
-   
+    background-color: #548bf7;  
 }
+.grid-item1.nested-grid1 > div:nth-child(2){
+    background-color: #54f7bb;  
+}
+.grid-item1.nested-grid1 > div:nth-child(3){
+    background-color: #dcf754;  
+}
+.grid-item1.nested-grid1 > div:nth-child(4){
+    background-color: #548bf7;  
+}
+.grid-item2.nested-grid2{
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+    background-color: rgb(73, 243, 104);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.grid-item2.nested-grid2 > div{
+    background-color: #bfbdbd;
+    border: 1px solid rgb(51, 102, 255); 
+    align-content: space-evenly;
+}
+.grid-item2.nested-grid2 > div:nth-child(2){
+    background-color: #548bf7; 
+}
+.grid-item2.nested-grid2 > div:nth-child(1){
+    background-color: #ccf320; 
+}
+/*Subgrid examples*/
+.grid-item3.nested-grid3{
+    display: grid;
+    grid-template-columns: subgrid [sub-col-1] [sub-col-2];
+    grid-template-rows: repeat(3, 1fr);    
+}
+
 
 /*For the second container in test.html*/
 .grid-test-1{
