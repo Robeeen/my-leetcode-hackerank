@@ -45,3 +45,13 @@ console.timeEnd("Second Call");
 
 //This way first call wud be 99ms but second call wud be 0.00ms
 
+//----------------------------------------//
+
+//multiple functions in single const
+
+const calc = {
+    
+}
+
+const result = calc.add(10).multiply(5).substract(20).add(10);
+console.log(result.total);
