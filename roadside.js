@@ -67,3 +67,17 @@ const calc = {
 
 const result = calc.add(10).multiply(5).substract(20).add(10);
 console.log(result.total);
+
+
+//Understanding the Fibonacci Function, the most common example of memoization
+
+let functionCalled = 0;
+const fibonacci = (n) =>{
+    if( n <= 1) return 1;
+    functionCalled ++;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+};
+
+console.log(fibonacci(10)); //89
+console.log(functionCalled); //88 times called
+
