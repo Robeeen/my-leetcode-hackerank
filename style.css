@@ -173,3 +173,11 @@ body{
 .grid-test-1 > div:nth-child(6) {
     grid-column: span 2;
 }
+
+    .folder, .file {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }

@@ -120,3 +120,89 @@ bindPerson();
 //This will console Hello my name is Harun and my age is: 35
 
 //Apply method
+const Person = {
+    name: 'Shams',
+    age: 45,
+    greet: function(a, b){
+        console.log(a + `!! my name is ${this.name} and my age is: ${this.age}, ` + b);
+    }
+};
+
+const AnotherPerson = {
+    name: 'Fakir',
+    age: 20
+}
+//With apply we can add Hello and Thank you before and after.
+Person.greet.apply(anotherPerson, ['Hello!', 'Thank You.']);
+
+
+//
+const data = {
+    "name": "root",
+    "type": "folder",
+    "children": [
+      {
+        "name": "Folder1",
+        "type": "folder",
+        "children": [
+          { "name": "File1.txt", "type": "file" },
+          { "name": "File2.txt", "type": "file" }
+        ]
+      },
+      {
+        "name": "File3.txt",
+        "type": "file"
+      },
+      {
+        "name": "Folder2",
+        "type": "folder",
+        "children": [
+          {
+            "name": "SubFolder1",
+            "type": "folder",
+            "children": [
+              { "name": "File4.txt", "type": "file" },
+              { "name": "Images", 
+                "type": "folder",
+                "children": [
+                    {
+                        "name": "photo.jpg",
+                        "type": "file"
+                    }
+                ]
+               }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+  
+  const fileSystem = document.getElementById('fileSystem');
+  
+  function createNode(item) {
+    const element = document.createElement('div');
+    element.textContent = item.name;
+    element.className = item.type;
+  
+    if (item.type === 'folder' && item.children) {
+      const childrenContainer = document.createElement('div');
+      childrenContainer.className = 'hidden';
+  
+      item.children.forEach(child => {
+        childrenContainer.appendChild(createNode(child));
+      });
+  
+      element.appendChild(childrenContainer);
+  
+      element.addEventListener('click', function(event) {
+        event.stopPropagation();
+        childrenContainer.classList.toggle('hidden');
+      });
+    }
+  
+    return element;
+  }
+  
+  fileSystem.appendChild(createNode(data));
+  
