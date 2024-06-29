@@ -99,7 +99,7 @@ console.log(result.total);
 const person = {
     name: 'Shams',
     age: 46,
-    greet(){
+    greet: function(){
         console.log(`Hello my name is ${this.name} and my age is: ${this.age}`);
     }
 };
@@ -109,7 +109,14 @@ const anotherPerson = {
     age: 35
 }
 
+//Call method
 person.greet.call(anotherPerson);
 //This will console Hello my name is Harun and my age is: 35
 
-person.greet();
+
+//Bind method
+const bindPerson = person.greet.bind(anotherPerson);
+bindPerson();
+//This will console Hello my name is Harun and my age is: 35
+
+//Apply method
