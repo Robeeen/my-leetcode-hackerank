@@ -181,3 +181,9 @@ body{
     .hidden {
       display: none;
     }
+    .folder {
+        color:rgb(9, 140, 61);
+    }
+    .file{
+        color: brown;
+    }
