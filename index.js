@@ -332,16 +332,7 @@ btn.addEventListener('click', ()=> {
     document.body.style.backgroundColor = changColor;
 })
 
-//Caching results Vieo from https://www.youtube.com/watch?v=vxggZffOqek&t=356s
 
-const clumsySquare = (num1, num2) => {
-    for ( let i = 0; i <= 100000000; i++ ){}
-        return num1 * num2;
-};
-
-console.time("First Call");
-console.log(clumsySquare(9455, 6599));
-console.timeEnd("First Call");
 
 
 
