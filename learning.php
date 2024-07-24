@@ -53,4 +53,35 @@ foreach( $matrix as &$row){
 }
 print_r($matrix);
 
+echo PHP_EOL;
+
+$a = [
+   [1, 5], [10, -2]
+];
+
+$b = [
+   [1, 3], [6, 15]
+];
+
+$c = [
+   [1, 9, 0, -8, 10, 0]
+];
+
+function add($a, $b) {
+    $m = count($a);
+    $n = count($a[0]);
+    $matrix = [];
+ 
+    for ($i = 0; $i < $m; $i++) {
+       $matrix[$i] = [];
+       for ($j = 0; $j < $n; $j++) {
+         $matrix[$i][$j] = $a[$i][$j] + $b[$i][$j];
+       }
+       
+    }
+    return $matrix;
+ }
+
+print_r(add($a, $b));
+
 
