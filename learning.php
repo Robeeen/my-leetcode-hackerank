@@ -68,16 +68,15 @@ $c = [
 ];
 
 function add($a, $b) {
-    $m = count($a);
-    $n = count($a[0]);
+    $m = count($a); //To refer row
+    $n = count($a[0]); // To refer colum
     $matrix = [];
  
     for ($i = 0; $i < $m; $i++) {
        $matrix[$i] = [];
        for ($j = 0; $j < $n; $j++) {
          $matrix[$i][$j] = $a[$i][$j] + $b[$i][$j];
-       }
-       
+       }       
     }
     return $matrix;
  }
