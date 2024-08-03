@@ -137,12 +137,18 @@
         height: 142px
     }
     section .text{
-        grid-row: span 1;
+    grid-row: span 1;
       padding: 10px;
       grid-column: span 3;
       padding-top: 20px;
       }
+    .emails{
     
+        box-shadow: unset;
+      padding-top: 20px;
+      border: 0px;
+      border-radius: 0px;
+    }
       h3{
         text-align:center;
       }
@@ -166,11 +172,17 @@
   text-align: left;
   cursor: pointer;
 }
-  input, textarea{
+  input{
     height: 40px;
     border-radius: 5px;
     border: 1px solid;
-    width: 300px;
+    width: 90%;
+  }
+  textarea{
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 90%;
   }
 .skip-navigation{
   display:none;
@@ -288,34 +300,60 @@
         </p>
       </div>
       </section>
- 
-    <section style="margin: 0 auto;grid-auto-rows: 400px">
-        <div class="text">
-     		<form name='contact-form'>
-            <p></p>
-            Name<br />
-            <input class='contact-form-name' id='ContactForm1_contact-form-name' name='name' size='30' value='' type='text' />
-            <p></p>
-            Email
-            <span style='font-weight: bolder;'>*</span><br />
-            <input class='contact-form-email' id='ContactForm1_contact-form-email' name='email' size='30' value='' type='text' />
-            <p></p>
-            Message<span style='font-weight: bolder;'>*</span><br />
-            <textarea class='contact-form-email-message' cols='25' id='ContactForm1_contact-form-email-message' name='email-message' rows='5'></textarea>
-            <p></p>
-            <input class='contact-form-button contact-form-button-submit' id='ContactForm1_contact-form-submit' value='Send' type='submit' />
-            <p></p>
-            <div style='text-align: center; max-width: 222px; width: 100%; border: unset; box-shadow: unset;'>
-            <p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
-            <p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
+
+<section style="margin: 0 auto;grid-auto-rows: 500px; grid-column: span 2;">
+        <div class="text" style="display: grid; grid-template-columns: 1fr 1fr">
+            <div class="emails">
+                <h3> Have questions?</h3>
+                <p style="padding: 20px;">
+                   
+Contact Ray Andrews: Fill in the form on right-side, and Ray Andrews will try to contact you as early as possible.
+Ray Andrews has travelled throughout Australia and the South Pacific as a naturalist for thirty years. 
+After a night by a campfire discussing Australia’s monoliths, he decided to set records straight and began
+a two-decade quest to unearth the geographic records of this nation. <br /><br />
+
+The Author Ray Andrews was the founder of the Geographic Extremes Society whose aim is to venture into the far-flung regions of the continent and explore its geographic wonders. This book is the culmination of his work documenting Australia’s natural history.
+                </p>
             </div>
+            <div class="emails">
+     		<form name='contact-form' style="padding-left: 20px;">
+                <h3>Send us your Enquiry</h3>
+                Name<br />
+                <input class='contact-form-name' id='ContactForm1_contact-form-name' name='name' size='30' value='' type='text' />
+                <p></p>
+                Email
+                <span style='font-weight: bolder;'>*</span><br />
+                <input class='contact-form-email' id='ContactForm1_contact-form-email' name='email' size='30' value='' type='text' />
+                <p></p>
+                Message<span style='font-weight: bolder;'>*</span><br />
+                <textarea class='contact-form-email-message' cols='25' id='ContactForm1_contact-form-email-message' name='email-message' rows='5'></textarea>
+                <p></p>
+                <input class='contact-form-button contact-form-button-submit' id='ContactForm1_contact-form-submit' value='Send' type='submit' />
+                <p></p>
+                <div style='text-align: center; max-width: 222px; width: 100%; border: unset; box-shadow: unset;'>
+                <p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
+                <p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
+                </div>
             </form>
+        </div>
+            
       </div>
-    </section>
+ </section>
 
     <footer>
-        <div>
-            Test
+        <div style="display: grid; grid-template-columns: 1fr 1fr">
+          <div>
+            <h3 style="color: white">Follow us</h3>
+            <ul style="color: white; font-size: 12px;">
+                <li><a href="#">Meta</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+
+        
+            </div>
+          <div>Mest</div>
         </div>
       </footer>
     
