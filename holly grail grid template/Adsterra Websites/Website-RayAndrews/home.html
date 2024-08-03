@@ -142,6 +142,11 @@
       grid-column: span 3;
       padding-top: 20px;
       }
+
+    .add-text{
+        grid-auto-rows: 440px;
+        margin: 0 auto;
+    }
     .emails{
     
         box-shadow: unset;
@@ -157,6 +162,7 @@
         padding: 10px 0;
         font-size: 17px;
         margin-top: 50px;
+        margin-bottom: -82px;
     }
     footer div{
         max-width: 1400px;
@@ -201,7 +207,7 @@
             grid-column: span 2;
         }
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 600px) {
         nav, article, aside{
             grid-column: span 3;
         }
@@ -212,7 +218,8 @@
             border-right: 0px;
         }
       section{
-        gap: 7px;
+        gap: 5px;
+        grid-template-columns: 1fr;
       }
       section div{
         border: 5px solid #fff;
@@ -289,7 +296,7 @@
     
             </section>
     
-    <section style="grid-auto-rows: 400px;margin: 0 auto;">  
+    <section class="add-text">  
       
       <div class="text">
         <h1 style="text-align:center">Best Australia’s geographic records Book, Wild Extremes!</h1>
@@ -353,7 +360,16 @@ The Author Ray Andrews was the founder of the Geographic Extremes Society whose 
 
         
             </div>
-          <div>Mest</div>
+          <div>
+            <h3 style="color: white">Contact us</h3>
+            <ul style="color: white; font-size: 12px;">
+                <li><a href="#">Phone: +61-0409784410</a></li>
+                <li><a href="#">What'sApp: +61-0409784410</a></li>
+                <li><a href="#">Email: rayandrews4562@gmail.com</a></li>
+                
+            </ul>
+
+          </div>
         </div>
       </footer>
     
