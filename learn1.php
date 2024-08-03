@@ -43,9 +43,10 @@ echo PHP_EOL;
 //Printing Number Pattern Using PHP
 
 for($i = 1; $i<=4; $i++){
-    $i1 = $i + 4;
-    $i2 = $i1 + 4;
-    echo $i . " " . $i1 . " " . $i2 . PHP_EOL;
+    $i1 = $i + 3;
+    $i2 = $i1 + 3;
+    $i3 = $i2 + 3;
+    echo $i . " " . $i1 . " " . $i2 . " " . $i3 . PHP_EOL;
 }
 
 echo PHP_EOL;
@@ -57,12 +58,15 @@ echo PHP_EOL;
 function findMedianSortedArrays($nums1, $nums2) {
     //mergting two array
     $sorted = array_merge($nums1, $nums2);
+    var_dump($sorted);
     //sorted them
     sort($sorted);
     //counting the merged array
     $total = count($sorted);
+    var_dump($total);
     //find middle 
     $middle = floor($total / 2);
+    var_dump($middle);
 
     //check if ODD or EVEN
     if($total % 2){
@@ -180,7 +184,8 @@ $arr2 =  [1, 1, 0, -1, -1];
 
 echo plusMinus($arr1);
 
-//Its base and height are both equal to . It is drawn using # symbols and spaces. The last line is not preceded by any spaces.
+//Its base and height are both equal to . It is drawn using # symbols and spaces. 
+//The last line is not preceded by any spaces.
 
 //Write a program that prints a staircase of size . it is right aligned
    #
@@ -196,6 +201,7 @@ function staircase($n) {
     }else{
         for($i = 1; $i <= $n; $i++){
             echo str_repeat(' ', $n-$i ) . str_repeat($x, $i ) . "\n";
+            //echo str_repeat(' ', $n-$i ) . str_repeat($x, $i ) . str_repeat('#', $n - $i) . "\n";
         }
     }
 
@@ -206,7 +212,21 @@ staircase($n);
 
 echo PHP_EOL;
 
-//Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
+function tree_hash($n){
+    if($n < 3){
+        return;
+    }else{
+        for( $i = 1; $i <= $n; $i ++ ){
+            echo str_repeat('*', $i * $i) . PHP_EOL;
+        }
+    }
+}
+
+$n = 6;
+tree_hash($n);
+
+//Given five positive integers, find the minimum and maximum values that can be calculated 
+//by summing exactly four of the five integers.
 // Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 
 
@@ -222,6 +242,7 @@ function miniMaxSum($arr) {
 
 }
 $arr = [5,2,3,4,1];
+//it comes 1,2,3,4,5
 miniMaxSum($arr);
 
 echo PHP_EOL;

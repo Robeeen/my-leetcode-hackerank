@@ -180,17 +180,17 @@ const data = {
   
   const fileSystem = document.getElementById('fileSystem');
   
-  function createNode(item) {
-    const element = document.createElement('div');
-    element.textContent = item.name;
-    element.className = item.type;
+  function createNode(item) { //Recursive function createNode()
+    const element = document.createElement('div'); //create a div
+    element.textContent = item.name; //file or folder name
+    element.className = item.type; // file or folder
   
     if (item.type === 'folder' && item.children) {
-      const childrenContainer = document.createElement('div');
+      const childrenContainer = document.createElement('div'); 
       childrenContainer.className = 'hidden';
   
       item.children.forEach(child => {
-        childrenContainer.appendChild(createNode(child));
+        childrenContainer.appendChild(createNode(child)); //recursively creating
       });
   
       element.appendChild(childrenContainer);

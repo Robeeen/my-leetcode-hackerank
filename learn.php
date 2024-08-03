@@ -1,47 +1,47 @@
 <?php
 
-// class Rectangle {
-//     public $length = 100;
-//     public $width = 50;
+class Rectangle {
+    public $length = 100;
+    public $width = 50;
 
-//     public function calculate($unit){
-//         $area = .5 * $this->length * $this->width;
-//         return $area . $unit;
-//     }
+    public function calculate($unit){
+        $area = .5 * $this->length * $this->width;
+        return $area . $unit;
+    }
 
-//     public function calculate_perimeter($unit){
-//         $peri = 2 * ( $this->length + $this->width);
-//         return $peri . $unit;
-//     }
-// }
+    public function calculate_perimeter($unit){
+        $peri = 2 * ( $this->length + $this->width);
+        return $peri . $unit;
+    }
+}
 
-// $recangle = new Rectangle();
+$recangle = new Rectangle();
 
-// print'Area : ' . $recangle->calculate('cm') . PHP_EOL; 
-// print 'Perimeter: ' . $recangle->calculate_perimeter('cm');
+print'Area : ' . $recangle->calculate('cm') . PHP_EOL; 
+print 'Perimeter: ' . $recangle->calculate_perimeter('cm');
 
-// class Rectangle {
-//     public $length;
-//     public $width;
+class Rectangle {
+    public $length;
+    public $width;
 
-//     public function __construct($length, $width){
-//             $this->length = $length;
-//             $this->width = $width;
-//     }
+    public function __construct($length, $width){
+            $this->length = $length;
+            $this->width = $width;
+    }
 
-//     public function getArea($unit){
-//         $area = .5 * $this->length * $this->width;
-//         return $area . $unit;
-//     }
+    public function getArea($unit){
+        $area = .5 * $this->length * $this->width;
+        return $area . $unit;
+    }
 
-//     public function getPerimeter($unit){
-//         $perimeter = 2 * ($this->length + $this->width);
-//         return $perimeter . $unit;
-//     }
+    public function getPerimeter($unit){
+        $perimeter = 2 * ($this->length + $this->width);
+        return $perimeter . $unit;
+    }
 
-// }
+}
 
-// $rectangle = new Rectangle(150, 120);
+$rectangle = new Rectangle(150, 120);
 
 // print 'Area: ' . $rectangle->getArea('m') . PHP_EOL;
 // print 'Perimeter: ' . $rectangle->getPerimeter('m') . PHP_EOL;
