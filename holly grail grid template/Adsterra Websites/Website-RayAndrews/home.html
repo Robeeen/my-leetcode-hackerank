@@ -104,7 +104,7 @@
         overflow: hidden;
         background-color: #afbcbb;
         border-radius: 6px;
-        border: 10px solid #fff;
+        border: 6px solid #fff;
         box-shadow: 3px 3px 3px rgba(0,0,0,0.25);
         font-size: 14px;
     }
@@ -126,11 +126,89 @@
         padding: 0px;
         text-align: center;
     }
+    section .add {
+      grid-row: span 1;
+      padding: 10px;
+      grid-column: span 3;
+      border: 0px;
+        border-radius: 0px;
+        box-shadow: unset;
+        background: #fff;
+        height: 142px
+    }
+    section .text{
+        grid-row: span 1;
+      padding: 10px;
+      grid-column: span 3;
+      padding-top: 20px;
+      }
     
       h3{
         text-align:center;
       }
+    footer{
+        background-color: #6b7d7b;
+        padding: 10px 0;
+        font-size: 17px;
+        margin-top: 50px;
+    }
+    footer div{
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        font-family: 'Poppins';
+        min-height: 200px;       
+    }
+ input[type="submit"] {
+  background: #023047;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+  input, textarea{
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 300px;
+  }
+.skip-navigation{
+  display:none;
+  }
+    /*Responsive*/
+    @media screen and (max-width: 1200px) {
+        nav{
+            grid-column: span 3;
+            border-bottom: 1px solid #c2c2c2;
+        }
+        nav li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        article{
+            grid-column: span 2;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        nav, article, aside{
+            grid-column: span 3;
+        }
+        aside{
+            border-top:  1px solid #c2c2c2;
+        }
+        article{
+            border-right: 0px;
+        }
+      section{
+        gap: 7px;
+      }
+      section div{
+        border: 5px solid #fff;
+        font-size: 12px;
+      }
     
+    
+    }
     
     </style>
       
@@ -188,15 +266,57 @@
                     <p>Ray Andrews has travelled throughout Australia and the South Pacific as a naturalist for thirty years. After a night by a campfire discussing Australia’s monoliths, he decided to set records straight and began a two-decade quest to unearth the geographic records of this nation</p>
                     <a href="https://australianextremes.com.au/author-ray-andrews/" target="_blank">Know more about Ray</a>                
                 </div>
-                <div class="mall">
-                    
+                <div class="mall">               
                                   
                 </div>
                 <div class="short">
                     <h3>Visiting Australia’s extreme locations</h3>
                     <p>To assist modern adventurers to experience the geographical extremes of Australia, we have compiled a list of locations and some notes on the best ways to get to these points of interest. Help us by sending in your photos to show other travellers the beauty of these spots..</p>
                     <a href="https://australianextremes.com.au/visit-the-extremes/" target="_blank">Read More</a>                
-                </div>
+                </div> 
+    
             </section>
+    
+    <section style="grid-auto-rows: 400px;margin: 0 auto;">  
+      
+      <div class="text">
+        <h1 style="text-align:center">Best Australia’s geographic records Book, Wild Extremes!</h1>
+        <p>
+              Wild Extremes isn’t a book of endless records but rather tells the backstory to Australia’s geographic records. It explores the controversies around records and examines how plants and animals have adapted to extreme locations. This is the unique story of the continent and islands of Australia. It scrutinises this nation through the lens of its geographic records. It explores Australia’s deserts, beaches, mountains, rivers, waterfalls, aquifers and lakes. But have you also wondered about Australian glaciers, or volcanoes? Like to know where are the largest and oldest meteorite craters? Where is the very centre of the continent and what are Australia’s extremities? Do you know where were the largest earthquakes? Where are the largest waves, most extreme points of Australia? The biggest threats to Australia, why are marine megafauna attracted to submarine canyons that incise Australia’s continental shelf?These questions and many more are answered when we examine Australia’s Wild Extremes. </p><p>
+              Readers travel with an assortment of chapter hero’s as well as the author, Ray Andrews – Australia’s Records guru who takes you exploring the extremes of the continent and unearthing records while uncovering some surprising verdicts. We get insights from long-dead explorers, adventurers, scientists, indigenous storytellers, landscape artists and bevy of industry professionals on our journeys through Australia’s extremes. Share in his joys and frustrations as he investigates its records, using his relaxed and engaging style to explain often complex but intriguing background stories.
+          <br />      
+        </p>
+      </div>
+      </section>
+ 
+    <section style="margin: 0 auto;grid-auto-rows: 400px">
+        <div class="text">
+     		<form name='contact-form'>
+            <p></p>
+            Name<br />
+            <input class='contact-form-name' id='ContactForm1_contact-form-name' name='name' size='30' value='' type='text' />
+            <p></p>
+            Email
+            <span style='font-weight: bolder;'>*</span><br />
+            <input class='contact-form-email' id='ContactForm1_contact-form-email' name='email' size='30' value='' type='text' />
+            <p></p>
+            Message<span style='font-weight: bolder;'>*</span><br />
+            <textarea class='contact-form-email-message' cols='25' id='ContactForm1_contact-form-email-message' name='email-message' rows='5'></textarea>
+            <p></p>
+            <input class='contact-form-button contact-form-button-submit' id='ContactForm1_contact-form-submit' value='Send' type='submit' />
+            <p></p>
+            <div style='text-align: center; max-width: 222px; width: 100%; border: unset; box-shadow: unset;'>
+            <p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
+            <p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
+            </div>
+            </form>
+      </div>
+    </section>
+
+    <footer>
+        <div>
+            Test
+        </div>
+      </footer>
     
       
