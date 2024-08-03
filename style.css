@@ -152,8 +152,7 @@ body{
     padding: 5px;
     justify-items: stretch;
     grid-template-columns: repeat(6, 1fr);
-    /* grid-template-rows: 100px 200px 300px; */
-}
+  }
 
 .grid-test-1 > div{
     background-color: #bfbdbd;

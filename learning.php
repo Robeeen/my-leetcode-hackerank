@@ -83,13 +83,17 @@ function add($a, $b) {
 
 print_r(add($a, $b));
 
-//Day of the Programmer
+//Day of the Programmer ..
 
 
 function dayOfProgrammer($year) {
+<<<<<<< HEAD
     // Write your code here 
        
     
+=======
+ 
+>>>>>>> 7a001e3ab86ce1e0c4d4c7f6e80bd46b5a4d7da3
     if($year <= 1918){
         
         if ( $year % 4 == 0 ) {           
