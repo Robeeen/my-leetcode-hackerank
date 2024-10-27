@@ -330,7 +330,32 @@ function randomz(number){
 btn.addEventListener('click', ()=> {
     const changColor = `rgb(${randomz(255)} ${randomz(255)} ${randomz(255)})`;
     document.body.style.backgroundColor = changColor;
-})
+});
+
+//remove duplicates from a given sorted link list with js
+  
+  function removeDuplicates(head) {
+    let current = head;
+  
+    // Traverse the linked list
+    while (current && current.next) {
+      if (current.val === current.next.val) {
+        // Skip the duplicate node
+        current.next = current.next.next;
+      } else {
+        // Move to the next unique node
+        current = current.next;
+      }
+    }
+  
+    return head;
+  }
+  
+  //input : 1 1 2 3 3
+  //output: 123
+
+  
+  
 
 
 
